@@ -135,6 +135,7 @@ Anurag Pareek
 Aspiring Data Analyst | Python | Data Visualization | SQL
 <img width="1536" height="754" alt="Figure_1" src="https://github.com/user-attachments/assets/4bc34898-5a6c-4f6b-be19-febff8537709" />
 
+<img width="640" height="480" alt="Figure_5" src="https://github.com/user-attachments/assets/747314a4-5a58-4105-b69e-90ee0d22c430" />
 
 ---
 
