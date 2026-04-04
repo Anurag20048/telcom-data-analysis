@@ -125,3 +125,32 @@ def churn_rate(column):
     return df.groupby(column)['Churn'].mean().sort_values(ascending=False)
 
 print("\nChurn Rate by Contract\n", churn_rate('Contract'))
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import StandardScaler
+import pandas as pd
+
+# Prepare data
+X = df.drop(['Churn', 'customerID'], axis=1)
+X = pd.get_dummies(X)
+y = df['Churn']
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Scaling (IMPORTANT)
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Model
+model = LogisticRegression(max_iter=2000)
+model.fit(X_train, y_train)
+
+# Prediction
+y_pred = model.predict(X_test)
+
+# Accuracy
+print("Accuracy:", accuracy_score(y_test, y_pred))
