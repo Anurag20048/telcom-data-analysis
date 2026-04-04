@@ -1,33 +1,31 @@
-# 📊 Customer Churn Analysis & Retention Strategy
+# 📊 Customer Churn Analysis & Prediction System
 
 ## 📌 Project Overview
 
-This project focuses on analyzing customer churn behavior using a telecom dataset. The goal is to identify key factors that influence customer churn and provide actionable insights to improve customer retention.
-
-The analysis is performed using Python with libraries such as Pandas, Seaborn, and Matplotlib, along with advanced data manipulation techniques.
+This project focuses on analyzing and predicting customer churn in a telecom company using Python. It combines data analysis, visualization, feature engineering, and machine learning to identify key factors affecting customer retention and predict churn behavior.
 
 ---
 
 ## 🎯 Objectives
 
-* Understand customer behavior and churn patterns
-* Identify key factors affecting churn
-* Perform data cleaning and feature engineering
-* Generate meaningful insights using visualization
-* Provide business recommendations for retention
+* Analyze customer behavior and churn patterns
+* Identify key drivers of churn
+* Perform feature engineering for better insights
+* Build a machine learning model to predict churn
+* Provide actionable business recommendations
 
 ---
 
 ## 📂 Dataset
 
-* Dataset: Telco Customer Churn Dataset
-* Records: ~7000 customers
-* Features include:
+* Telco Customer Churn Dataset
+* ~7000 customer records
+* Includes:
 
-  * Customer demographics
+  * Demographics
   * Services subscribed
-  * Billing information
-  * Contract details
+  * Billing details
+  * Contract information
   * Churn status
 
 ---
@@ -37,9 +35,9 @@ The analysis is performed using Python with libraries such as Pandas, Seaborn, a
 * Python
 * Pandas
 * NumPy
-* Seaborn
-* Matplotlib
-* Jupyter Notebook / PyCharm
+* Seaborn & Matplotlib
+* Scikit-learn
+* PyCharm / Jupyter Notebook
 
 ---
 
@@ -50,16 +48,16 @@ The analysis is performed using Python with libraries such as Pandas, Seaborn, a
 * Converted `TotalCharges` to numeric
 * Handled missing values
 * Removed duplicates
-* Encoded churn values (Yes → 1, No → 0)
+* Encoded categorical variables
 
 ---
 
 ### 2. Exploratory Data Analysis (EDA)
 
 * Churn distribution analysis
-* Churn by contract type, payment method, and tenure
-* Correlation analysis using heatmap
-* Visualization using bar plots, box plots, and count plots
+* Churn by contract, payment method, and tenure
+* Correlation heatmap
+* Visual insights using bar plots, box plots, and count plots
 
 ---
 
@@ -81,58 +79,58 @@ The analysis is performed using Python with libraries such as Pandas, Seaborn, a
 
 ---
 
-### 5. Visualization
+### 5. Machine Learning Model
 
-* Churn trends by contract, tenure, and payment method
-* Feature-based analysis (CustomerType, SpendingLevel)
-* Multi-variable visualization using categorical plots
+* Logistic Regression model used for churn prediction
+* Data preprocessing with one-hot encoding and feature scaling
+* Train-test split applied
+* Model evaluation using accuracy, confusion matrix, and classification report
 
 ---
 
 ## 📊 Key Insights
 
-* Customers with **month-to-month contracts** have the highest churn rate
-* **Electronic check users** show significantly higher churn
-* **Senior citizens** are more likely to churn
-* Customers with **low tenure** have higher churn probability
-* **High monthly charges** are associated with increased churn
+* Month-to-month contract customers have the highest churn rate
+* Electronic check users are more likely to churn
+* Senior citizens show higher churn probability
+* Customers with low tenure are at higher risk
+* High monthly charges increase churn likelihood
 * Gender has minimal impact on churn
 
 ---
 
 ## 💼 Business Recommendations
 
-* Encourage long-term contracts through discounts
-* Improve payment options for electronic check users
-* Target high-risk customers with retention campaigns
-* Enhance onboarding experience for new customers
+* Promote long-term contracts with incentives
+* Improve payment methods for high-risk users
+* Target new customers with retention strategies
 * Offer personalized plans for high-value customers
 
 ---
 
-## 📈 Project Outcome
+## 📈 Results
 
-This project demonstrates the ability to:
-
-* Perform end-to-end data analysis
-* Apply advanced Python techniques
-* Generate business-driven insights
-* Build visually compelling analytics
+* Successfully identified key churn drivers
+* Built predictive model for churn classification
+* Generated actionable insights for business decision-making
 
 ---
 
 ## 🚀 Future Improvements
 
-* Build a Power BI dashboard
-* Add machine learning model for churn prediction
-* Deploy using Streamlit for interactive analysis
+* Implement advanced models (Random Forest, XGBoost)
+* Build interactive dashboard (Power BI)
+* Deploy using Streamlit for real-time predictions
 
 ---
 
 ## 👨‍💻 Author
 
 Anurag Pareek
-Aspiring Data Analyst | Python | Data Visualization | SQL
+Aspiring Data Analyst | Python | SQL | Data Visualization
+
+---
+
 <img width="1536" height="754" alt="Figure_1" src="https://github.com/user-attachments/assets/4bc34898-5a6c-4f6b-be19-febff8537709" />
 
 <img width="640" height="480" alt="Figure_5" src="https://github.com/user-attachments/assets/747314a4-5a58-4105-b69e-90ee0d22c430" />
