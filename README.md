@@ -133,5 +133,8 @@ This project demonstrates the ability to:
 
 Anurag Pareek
 Aspiring Data Analyst | Python | Data Visualization | SQL
+<img width="1536" height="754" alt="Figure_1" src="https://github.com/user-attachments/assets/4bc34898-5a6c-4f6b-be19-febff8537709" />
+
 
 ---
+
