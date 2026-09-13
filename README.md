@@ -1,17 +1,26 @@
 # 📊 Telecom Customer Churn Analysis & Prediction
 
-A recruiter-ready **Python data analytics and machine learning project** that analyzes telecom customer churn, segments high-risk customers, and predicts churn using Logistic Regression.
+> An end-to-end data analytics and machine learning project that identifies customer churn patterns, high-risk segments, and retention opportunities.
 
-> **Project status:** Portfolio-ready. The repository includes reproducible data loading, feature engineering, EDA, ML evaluation, automated tests, and an interactive Streamlit dashboard.
+## 🎯 Project Overview
 
-## 🚀 Dashboard Preview
+Customer churn is one of the most important challenges for subscription-based businesses. This project analyzes telecom customer data to understand **why customers leave, which customer segments are most vulnerable, and how machine learning can help prioritize retention efforts**.
 
-![Dashboard Preview](assets/dashboard-preview.svg)
+The project combines data cleaning, exploratory analysis, customer segmentation, feature engineering, Logistic Regression, model evaluation, and an interactive Streamlit dashboard.
 
-## 🧠 What the project demonstrates
+## 📌 Business Objectives
+
+1. Measure the overall customer churn rate.
+2. Identify customer characteristics associated with higher churn.
+3. Compare churn across contract types, tenure, spending, and payment methods.
+4. Identify high-risk customer segments.
+5. Build a classification model to predict churn.
+6. Translate analytical findings into practical retention recommendations.
+
+## 🔄 Project Workflow
 
 ```text
-Telco Customer Data
+Telecom Customer Data
         ↓
 Data Cleaning & Validation
         ↓
@@ -21,56 +30,50 @@ Exploratory Data Analysis
         ↓
 Customer Segmentation
         ↓
-Churn Prediction Model
+Churn Prediction
         ↓
-Precision / Recall / F1 / ROC-AUC
+Model Evaluation
         ↓
-Business Insights & Retention Recommendations
+Business Recommendations
         ↓
 Interactive Streamlit Dashboard
 ```
 
-## ✨ Key Features
+## 📈 Dataset
 
-- Portable CSV-based data loading — no machine-specific file paths
-- Missing-value handling and duplicate removal
-- Churn encoding and reusable feature engineering
-- Customer segmentation by **tenure** and **monthly spending**
-- Contract, payment method, tenure and charge analysis
-- GroupBy and pivot-table analysis
-- High-risk customer segment identification
-- Logistic Regression churn prediction pipeline
-- One-hot encoding, imputation and feature scaling through a reproducible sklearn pipeline
-- Evaluation with **Accuracy, Precision, Recall, F1-score and ROC-AUC**
-- Confusion matrix analysis
-- Interactive Streamlit dashboard
-- Automated pytest regression tests
-- Clean modular project structure
+The project uses the **Telco Customer Churn** dataset containing customer demographics, subscribed services, contract information, billing details, tenure, and churn status.
 
-## 📌 Dataset
+The cleaned analysis dataset contains **7,032 customer records**.
 
-The project uses the commonly used **Telco Customer Churn** dataset with approximately 7,000 customer records covering demographics, services, contracts, billing and churn status.
+## 🔎 Exploratory Analysis
 
-The dataset is included in the repository for reproducible portfolio analysis.
+The analysis investigates:
 
-## 📈 Actual Analysis Results
+- Overall churn distribution
+- Churn by contract type
+- Churn by customer tenure
+- Monthly-charge patterns
+- Payment-method relationships
+- Service adoption
+- Customer segmentation
+- High-risk customer groups
 
-The current dataset contains **7,032 cleaned customer records** with an overall churn rate of **26.58%**.
+## 🤖 Machine Learning
 
-| Metric | Result |
-|---|---:|
-| Customers analyzed | 7,032 |
-| Overall churn rate | 26.58% |
-| Average monthly charges | $64.80 |
-| Average tenure | 32.4 months |
-| New + high-spending customers | 829 |
-| Month-to-month churn | 42.71% |
-| One-year contract churn | 11.28% |
-| Two-year contract churn | 2.85% |
+A **Logistic Regression** classification pipeline is used as the baseline churn prediction model.
 
-### Model evaluation
+The pipeline includes:
 
-Using an 80/20 stratified train-test split and Logistic Regression:
+- Feature preparation
+- Missing-value handling
+- One-hot encoding
+- Feature scaling
+- Stratified train/test split
+- Model training
+- Prediction
+- Classification evaluation
+
+### Model Evaluation
 
 | Metric | Score |
 |---|---:|
@@ -80,47 +83,61 @@ Using an 80/20 stratified train-test split and Logistic Regression:
 | F1-score | 60.74% |
 | ROC-AUC | 83.33% |
 
-**Why multiple metrics?** Churn datasets are imbalanced, so accuracy alone can be misleading. Recall and ROC-AUC provide additional information about the model's ability to identify customers likely to churn.
+Recall and ROC-AUC are included because churn prediction is an imbalanced classification problem where identifying potential churners is particularly important.
 
-## 🔎 Key Business Insights
+## 💡 Key Business Insights
 
-- **Month-to-month customers show the highest churn rate (42.71%)**, compared with 11.28% for one-year contracts and 2.85% for two-year contracts.
-- Customers with shorter tenure are more vulnerable to churn, making early-stage retention important.
+- Month-to-month customers have the highest observed churn rate at **42.71%**.
+- One-year contract customers show substantially lower churn at **11.28%**.
+- Two-year contract customers show the lowest observed churn at **2.85%**.
+- Customers with shorter tenure represent an important retention opportunity.
 - Higher monthly charges are associated with increased churn risk in the exploratory analysis.
-- The project identifies **829 customers in the New + High Spending segment** as a practical high-priority segment for retention analysis.
-- Payment method and service choices can be used to further segment customers for targeted retention campaigns.
+- The analysis identifies **829 customers** in the New + High Spending segment for targeted retention analysis.
 
 ## 💼 Business Recommendations
 
-1. Offer incentives for month-to-month customers to move to longer contracts.
-2. Create an onboarding/retention program for new customers during their first year.
-3. Target high-value, high-risk customers with personalized plans or service offers.
-4. Investigate payment-method friction and proactively support customers showing churn risk.
-5. Use the churn model as a prioritization tool rather than treating predictions as guaranteed outcomes.
+1. Encourage month-to-month customers to move toward longer-term contracts.
+2. Strengthen onboarding and retention programs for newer customers.
+3. Prioritize high-value customers showing churn risk.
+4. Investigate payment and service friction among high-risk groups.
+5. Use model predictions to prioritize retention activity rather than treating them as guaranteed outcomes.
+
+## 📊 Dashboard
+
+The Streamlit dashboard brings the analysis together through:
+
+- Churn KPIs
+- Customer segmentation
+- Contract analysis
+- Monthly-charge analysis
+- Churn visualizations
+- Model evaluation metrics
+- Interactive filtering
+
+![Dashboard Preview](assets/dashboard-preview.svg)
 
 ## 🛠️ Technology Stack
 
 | Area | Technology |
 |---|---|
-| Language | Python |
-| Data analysis | Pandas, NumPy |
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
 | Visualization | Matplotlib, Seaborn |
-| Machine learning | Scikit-learn |
+| Machine Learning | Scikit-learn |
 | Dashboard | Streamlit |
 | Testing | Pytest |
-| Version control | Git / GitHub |
+| Version Control | Git / GitHub |
 
 ## 📁 Project Structure
 
 ```text
-telecom-churn-analysis/
+telcom-data-analysis/
 ├── assets/
 │   ├── architecture.svg
 │   └── dashboard-preview.svg
 ├── dashboard/
 │   └── app.py
 ├── src/
-│   ├── __init__.py
 │   ├── analysis.py
 │   ├── data.py
 │   └── model.py
@@ -130,92 +147,84 @@ telecom-churn-analysis/
 ├── run_analysis.py
 ├── telcom.py
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
-![Architecture](assets/architecture.svg)
+## ▶️ Run the Project
 
-## ▶️ Run Locally
-
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/Anurag20048/telcom-data-analysis.git
 cd telcom-data-analysis
 ```
 
-### 2. Create a virtual environment
+### Create a virtual environment
 
-**Windows:**
+Windows:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-**macOS/Linux:**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the analysis
+### Run the analysis
 
 ```bash
 python run_analysis.py
 ```
 
-### 5. Run tests
+### Run tests
 
 ```bash
 pytest -q
 ```
 
-### 6. Launch the dashboard
+### Launch the dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
 
-The dashboard loads the dataset from the repository using a portable project-relative path, so it does not depend on the author's computer directory.
+## 🧪 Skills Demonstrated
 
-## 🧪 Validation
+- Data cleaning and validation
+- Exploratory Data Analysis
+- Feature engineering
+- Customer segmentation
+- Classification modeling
+- Model evaluation
+- Business analytics
+- Data visualization
+- Dashboard development
+- Python and Scikit-learn
+- Translating model output into business recommendations
 
-The project was tested locally after the refactor:
+## 🔮 Future Enhancements
 
-- **3/3 automated tests passed**
-- Analysis pipeline executed successfully
-- Dataset loaded from the repository path
-- Model trained successfully
-- Precision, recall, F1 and ROC-AUC were calculated
+- Compare Logistic Regression with Random Forest and XGBoost
+- Add cross-validation and hyperparameter tuning
+- Add model explainability
+- Add SQL-based analysis
+- Expand dashboard analytics
+- Deploy the Streamlit dashboard
 
-The ML score is a benchmark on this dataset, not a claim of production performance.
+## 🤝 Contributing
 
-## ⚠️ Limitations
+Pull requests are welcome. For major changes, please open an issue first to discuss the proposed improvement.
 
-- This is a portfolio analysis project, not a production churn service.
-- Logistic Regression is used as an interpretable baseline; additional models could be benchmarked.
-- Results depend on the provided dataset and train/test split.
-- Historical churn relationships should not automatically be interpreted as causal relationships.
-- A deployed dashboard and external monitoring are not included in this repository.
+## 📄 License
 
-## 🔮 Future Improvements
+See the `LICENSE` file for licensing information.
 
-- Compare Logistic Regression with Random Forest and XGBoost.
-- Add cross-validation and hyperparameter tuning.
-- Add model explainability using feature importance/SHAP.
-- Add SQL-based analysis alongside the Python workflow.
-- Deploy the Streamlit dashboard.
-- Add automated model/data-quality checks in CI.
+## 👤 Author
 
-## 👨‍💻 Author
+**Anurag Pareek**
 
-**Anurag Pareek** — Python | Data Analysis | Machine Learning | Data Visualization
+- GitHub: https://github.com/Anurag20048
